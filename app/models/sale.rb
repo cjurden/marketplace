@@ -1,7 +1,9 @@
 class Sale < ActiveRecord::Base
 	 before_create :populate_guid
   belongs_to :roast
- 
+  
+  include AASM
+  
   aasm column: 'state' do
   	state :pending, initial: true
   	state :processing
@@ -16,7 +18,7 @@ class Sale < ActiveRecord::Base
   		transitions from: :processing, to: :finished
   	end
   	
-  	events :fail do
+  	event :fail do
   		transitions from: :processing, to: :errored
   	end
   end
@@ -25,13 +27,13 @@ class Sale < ActiveRecord::Base
   	begin
   		save!
   		charge = Stripe::Charge.create(
-  			amounts: self.amounts,
+  			amount: self.amount,
   			currency: "usd",
   			card: self.stripe_token,
-  			description: self.email
+  			description: "Book Sale"
   		)
   		self.update(stripe_id: charge.id)
-  		self.finish
+  		self.finish!
   	rescue Stripe::StripeError => e
   		self.update_attributes(error: e.message)
   		self.fail!
