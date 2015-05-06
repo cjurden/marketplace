@@ -55,3 +55,5 @@ gem 'paperclip'
 
 gem 'dotenv-rails', groups: :development
 
+gem 'aws-sdk'
+
