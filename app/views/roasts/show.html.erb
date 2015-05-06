@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @roast.name %>
+</p>
+
+<p>
+  <strong>Roaster:</strong>
+  <%= @roast.roaster %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @roast.type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @roast.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @roast.price %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @roast.available %>
+</p>
+
+<%= link_to 'Edit', edit_roast_path(@roast) %> |
+<%= link_to 'Back', roasts_path %>
