@@ -67,7 +67,7 @@ class RoastsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_roast
-      @roast = Roast.find(params[:id])
+      @roast = Roast.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
