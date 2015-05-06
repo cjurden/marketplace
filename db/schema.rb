@@ -16,12 +16,11 @@ ActiveRecord::Schema.define(version: 20150506030748) do
   create_table "roasts", force: :cascade do |t|
     t.string   "name"
     t.string   "roaster"
-    t.string   "type"
     t.text     "description"
     t.integer  "price"
-    t.boolean  "available"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "available",   default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "user_id"
   end
 
