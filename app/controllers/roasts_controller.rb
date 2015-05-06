@@ -1,4 +1,5 @@
 class RoastsController < ApplicationController
+  before_filter :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_roast, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -26,7 +27,7 @@ class RoastsController < ApplicationController
   # POST /roasts
   # POST /roasts.json
   def create
-    @roast = Roast.new(roast_params)
+    @roast = current_user.roasts.new(roast_params)
 
     respond_to do |format|
       if @roast.save
