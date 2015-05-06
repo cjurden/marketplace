@@ -72,6 +72,6 @@ class RoastsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roast_params
-      params.require(:roast).permit(:name, :roaster, :type, :description, :price, :available, :image, :resource)
+      params.require(:roast).permit(:name, :roaster, :type, :description, :price, :available, :image)
     end
 end
