@@ -1,27 +1,17 @@
 class TransactionsController < ApplicationController
   def create
   	roast  = Roast.find_by!(slug: params[:slug])
-  	token = params[:stripeToken] 
-  	
-    begin 
-    
-     charge = Stripe::Charge.create(
-     	amount: roast.price,
-     	currency: "usd",
-     	card: token,
-     	description: current_user.email)
-     
-     @sale = roast.sales.create!(buyer_email: current_user.email)
-     redirect_to pickup_url(guid: @sale.guid)
-     
-     rescue Stripe::CardError => e
-     
-      @error = e
-      
-      redirect_to roast_path(roast), notice: @error
-      
-     end
-	
+	sale = @roast.sales.create(
+		amount: @roast.price,
+		buyer_email: current_user.email,
+		seller_email: @roast.user.email,
+		stripe_token: params[:stripeToken])
+	sale.process!
+	if sale.finished?
+		redirect_to pickup_url(guid: sale.guid), notice: "Transaction Successful"
+	else
+		redirect_to book_path(book), notice: "Something went wrong"
+	end
   end
  
   def pickup

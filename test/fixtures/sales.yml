@@ -3,13 +3,11 @@
 one:
   buyer_email: MyString
   seller_email: MyString
-  amount: 1
   guid: MyString
   roast_id: 1
 
 two:
   buyer_email: MyString
   seller_email: MyString
-  amount: 1
   guid: MyString
   roast_id: 1
