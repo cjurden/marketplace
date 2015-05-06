@@ -1,0 +1,11 @@
+<div class="col-md-3">
+<div class="thumbnail">
+  <%= link_to roast_path(roast) do %>
+  <%= image_tag "blueprint.jpg", class: "img-responsive" %>
+  <% end %>
+<div class="caption">
+  <p><strong><%= link_to roast.name, roast_path(roast) %></strong></p>
+  <p>$ <%=roast.price.to_f%></p>
+</div>
+</div>
+</div>

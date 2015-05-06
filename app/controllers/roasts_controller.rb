@@ -1,10 +1,12 @@
 class RoastsController < ApplicationController
   before_action :set_roast, only: [:show, :edit, :update, :destroy]
 
+  respond_to :html
   # GET /roasts
   # GET /roasts.json
   def index
-    @roasts = Roast.all
+    @roasts = Roast.where(available: true)
+    respond_with(@roast)
   end
 
   # GET /roasts/1
