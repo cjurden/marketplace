@@ -3,7 +3,6 @@ class CreateRoasts < ActiveRecord::Migration
     create_table :roasts do |t|
       t.string :name
       t.string :roaster
-      t.string :type
       t.text :description
       t.integer :price
       t.boolean :available, default: true
