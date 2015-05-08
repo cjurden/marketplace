@@ -6,8 +6,8 @@ class RoastsController < ApplicationController
   # GET /roasts
   # GET /roasts.json
   def index
-    @roasts = Roast.where(available: true)
-    respond_with(@roast)
+	@roasts = Roast.where(available: true).where(["name LIKE ?","%#{params[:search]}%"])
+	respond_with(@roast)
   end
 
   # GET /roasts/1
