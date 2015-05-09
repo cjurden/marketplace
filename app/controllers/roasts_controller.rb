@@ -3,6 +3,7 @@ class RoastsController < ApplicationController
   before_action :set_roast, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
+  #Function to display roasts index
   # GET /roasts
   # GET /roasts.json
   def index
@@ -15,15 +16,18 @@ class RoastsController < ApplicationController
   def show
   end
 
+  #Function to add new roasts
   # GET /roasts/new
   def new
     @roast = Roast.new
   end
 
+  #Function to edit roasts
   # GET /roasts/1/edit
   def edit
   end
 
+  #Function to create new roasts
   # POST /roasts
   # POST /roasts.json
   def create
@@ -40,6 +44,7 @@ class RoastsController < ApplicationController
     end
   end
 
+  #Function to update roasts
   # PATCH/PUT /roasts/1
   # PATCH/PUT /roasts/1.json
   def update
@@ -54,6 +59,7 @@ class RoastsController < ApplicationController
     end
   end
 
+  #Function to destroy and delete roasts
   # DELETE /roasts/1
   # DELETE /roasts/1.json
   def destroy
