@@ -30,7 +30,7 @@ class Sale < ActiveRecord::Base
   			amount: self.amount,
   			currency: "usd",
   			card: self.stripe_token,
-  			description: "Book Sale"
+  			description: "Roast Sale"
   		)
   		self.update(stripe_id: charge.id)
   		self.finish!
