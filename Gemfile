@@ -63,5 +63,7 @@ gem 'stripe'
 
 gem 'aasm'
 
+gem 'font-awesome-rails'
+
 
 
