@@ -10,7 +10,7 @@
   <tbody>
   <% @roasts.each do |roast| %>
     <tr>
-      <td><%= roast.id %></td>
+      <td><%= number_to_currency(roast.price.to_f / 100) %></td>
       <td><%= link_to roast.name, roast_path(roast) %></td>
       <td><%= roast.available %></td>
       <td><%= link_to "Edit", edit_roast_path(roast) %></td>
