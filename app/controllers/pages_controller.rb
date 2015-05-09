@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   	if current_user
   		redirect_to roasts_path
   	end
-  	@roasts = Roast.last(4)
+  	@roasts = Roast.where(available: true).last(4)
   end
 
   def dashboard

@@ -1,11 +1,11 @@
-<div class="jumbotron">
-<h1><i class="fa fa-coffee"></i> Welcome to CoffeeHaus</h1>
-<p>For all your coffee needs. </p>
-<%= link_to "Roasts", roasts_path, class: "btn btn-primary btn-lg" %>
-</div>
+<body id = "home_page">
+  <div class="jumbotron">
+    <h1><font color="white"><i class="fa fa-coffee"></i> Welcome to CoffeeHaus</h1>
+    <p><font size="5">For all your coffee needs. </bold></font></font></p>
+    <%= link_to "Roasts", roasts_path, class: "btn btn-primary btn-lg" %>
+  </div>
 
-<div class="row">
-
-	<%= render @roasts %>
-
-</div>
+  <div id="rowhome" class="row">
+	  <%= render @roasts %>
+  </div>
+</body>

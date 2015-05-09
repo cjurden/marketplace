@@ -1,3 +1,101 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  margin-top: 50px;
+  width: 1420px;
+}
+
+.container-fluid {
+  background-image: url("Wallpapers-room_com___Starbucks_Coffee_by_DeXi811026_1920x1200.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+body {
+  background-image: url("zpearn-bloomgrow-blog-background-3.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+div.jumbotron {
+  margin-top: 25px;
+  background-image: url("coffee-desktop-background-498003.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+#rowhome{
+  padding-top: 25px;
+}
+
+.btn-primary {
+    background: #472400;
+    border: 1px solid #472400;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+    background: #2B1600;
+    border: 1px solid #472400;
+    color: #E6E6E6
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: white;
+}
+
+div.thumbnail {
+  margin: 50px 20px;
+  padding: 10px;
+  border: 1px solid #663300;
+  height: 320px;
+  width: 280px;
+  float: left;
+  text-align: center;
+}
+
+div.thumbnail img {
+  height: 240px;
+  width: 260px;
+  border: 1px solid #CCCCCC;
+}
+
+a{
+  color: #472400;
+}
+
+a:hover, a:focus{
+  color: #A38566;
+}
+
+#form input{
+  color: #A38566;
+}
+
+#showroast{
+  margin-top: 30px;
+}
+
+#leftshow{
+  padding-right: 50px;
+}
+
+#leftshow img{
+  border: 1px solid #663300;
+}
+
+#rightshow{
+  padding-left: 50px;
+}
+
+#navbar-header {
+  background-color: #00bfff;
+}
+
+#content {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+}
