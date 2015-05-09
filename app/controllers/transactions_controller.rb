@@ -1,4 +1,6 @@
 class TransactionsController < ApplicationController
+	
+  #Function to find roast by its slug and check if the sale is successful.
   def create
   	roast  = Roast.find_by!(slug: params[:slug])
 	sale = roast.sales.create(
@@ -14,6 +16,7 @@ class TransactionsController < ApplicationController
 	end
   end
  
+ #Function to obtain purchased roast
   def pickup
     @sale = Sale.find_by!(guid: params[:guid])
     @roast = @sale.roast
