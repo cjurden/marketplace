@@ -1,3 +1,4 @@
+<!-- Partial for Dashboard -->
 <table class="table table-condensed">
   <thead>
     <tr>
@@ -8,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-  <% @roasts.each do |roast| %>
+  <% @roasts.each do |roast| %><!-- Loads in every item added by the user -->
     <tr>
       <td><%= number_to_currency(roast.price.to_f / 100) %></td>
       <td><%= link_to roast.name, roast_path(roast) %></td>

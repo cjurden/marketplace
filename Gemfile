@@ -43,10 +43,13 @@ group :development, :test do
   gem 'spring'
 end
 
+#General Look of the Application
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+#Easy Design of Forms
 gem 'simple_form'
 
+#Users and Accounts
 gem 'devise'
 
 gem 'cancan'
@@ -55,14 +58,18 @@ gem 'paperclip'
 
 gem 'dotenv-rails', group: :development
 
+#Amazon Web Services
 gem 'aws-sdk'
 
 gem 'friendly_id'
 
+#Payment Service
 gem 'stripe'
+
 
 gem 'aasm'
 
+#Icon Library
 gem 'font-awesome-rails'
 
 

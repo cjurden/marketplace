@@ -1,3 +1,4 @@
+<!-- Partial for Dashboard -->
 <table class="table table-condensed">
   <thead>
     <tr>
@@ -7,7 +8,7 @@
     </tr>
   </thead>
   <tbody>
-  <% @sales.each do |sale| %>
+  <% @sales.each do |sale| %><!-- Loads in every sale by the user -->
     <tr>
       <td><%= link_to sale.roast.name, pickup_path(sale.guid) %></td>
       <td><%= time_ago_in_words(sale.created_at) %> ago</td>
