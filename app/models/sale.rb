@@ -3,7 +3,7 @@ class Sale < ActiveRecord::Base
   belongs_to :roast
   
   include AASM
-  
+  #stripe payment processing integration using different states
   aasm column: 'state' do
   	state :pending, initial: true
   	state :processing
