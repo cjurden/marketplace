@@ -1,3 +1,5 @@
+<!-- Shows Users Purchased Items, Sales, and Added Items -->
+
 <div class="row">
   <h1 class="text-center">Dashboard</h1>
   <div class="col-md-4">
@@ -9,7 +11,7 @@
 		  You do not have any roast yet. Please create new roast first!
 		  </p>
 	  <% else %>
-		  <%= render "roasts" %>
+		  <%= render "roasts" %><!-- Loads roasts partial to view all of the items added by the user-->
 	  <% end %>
   </div>
   <div class="col-md-4">
@@ -21,7 +23,7 @@
 		  You have not purchased any items yet.
 		  </p>
 	  <% else %>
-		  <%= render "purchased" %>
+		  <%= render "purchased" %><!-- Loads purchased partial to view all items purchased by the user-->
 	  <% end %>
   </div>
   <div class="col-md-4">
@@ -33,7 +35,7 @@
 		    You have not sold any items yet.
 		  </p>
 	  <% else %>
-		  <%= render "sales" %>
+		  <%= render "sales" %><!-- Loads sales partial to view all sales by the user -->
 	  <% end %>
   </div>
 </div>

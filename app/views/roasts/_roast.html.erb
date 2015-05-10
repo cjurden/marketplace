@@ -1,11 +1,12 @@
+<!-- Display an item in tumbnail form for Index -->
 <div class="col-md-3">
-<div class="thumbnail">
-  <%= link_to roast_path(roast) do %>
-  <%= image_tag roast.image.url(:original), class: "img-responsive" %>
-  <% end %>
-<div class="caption">
-  <p><strong><%= link_to roast.name, roast_path(roast) %></strong></p>
-  <p><%= number_to_currency(roast.price.to_f / 100) %></p>
-</div>
-</div>
+	<div class="thumbnail">
+		<%= link_to roast_path(roast) do %>
+		<%= image_tag roast.image.url(:original), class: "img-responsive" %>
+		<% end %>
+		<div class="caption">
+			<p><strong><%= link_to roast.name, roast_path(roast) %></strong></p>
+			<p><%= number_to_currency(roast.price.to_f / 100) %></p><!-- Price converted from cents to dollars -->
+		</div>
+	</div>
 </div>

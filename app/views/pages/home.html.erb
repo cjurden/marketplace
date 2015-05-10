@@ -1,11 +1,11 @@
 <body id = "home_page">
-  <div class="jumbotron">
-    <h1><font color="white"><i class="fa fa-coffee"></i> Welcome to CoffeeHaus</h1>
+  <div class="jumbotron"><!-- Box behind the Welcome Message -->
+    <h1><font color="white"><i class="fa fa-coffee"></i><!-- Coffee Icon --> Welcome to CoffeeHaus</h1>
     <p><font size="5">For all your coffee needs. </bold></font></font></p>
-    <%= link_to "Roasts", roasts_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Roasts", roasts_path, class: "btn btn-primary btn-lg" %><!-- To roasts index -->
   </div>
 
-  <div id="rowhome" class="row">
+  <div id="rowhome" class="row"> <!-- Renders the 4 most recent items -->
 	  <%= render @roasts %>
   </div>
 </body>
