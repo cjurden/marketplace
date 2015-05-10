@@ -2,8 +2,14 @@
 
 Welcome to the Group 6 Semester Project for EECS 448.
 
-Needs to be developed:
-Main Screen
-...
+To run on your local computer, type the following into your terminal under the marketplace directory:
 
+$ bundle install
+$ rake db:migrate
+$ rails s
 
+then go to your browser and open localhost: and the port number described in the server start up.
+  (most of the time it will be http://localhost:3000/)
+  
+IMPORTANT! You Must Have The .env File In Your Directory For The Payment Process And Image Upload To Work!
+  This File Is Not Commited On This Repo And Must Be Requested!
